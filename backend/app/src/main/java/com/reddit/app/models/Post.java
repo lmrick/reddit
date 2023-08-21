@@ -4,8 +4,6 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-
 import java.time.Instant;
 
 @Data
@@ -37,6 +35,6 @@ public class Post {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id", referencedColumnName = "id")
-    private SubReddit subReddit;
+    private Subreddit subReddit;
 
 }
